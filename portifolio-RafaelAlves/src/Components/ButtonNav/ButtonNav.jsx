@@ -1,10 +1,11 @@
-// import { Children } from "react"
+import { StyledButton } from "./StyledButtonNav"
+
 
 function Button({children}) {
 
     return (
         <>
-            <button>{children}</button>
+            <StyledButton>{children}</StyledButton>
         </>
     )
 }

@@ -1,8 +1,9 @@
 import LogoR from "../../assets/PortIcon.png"
 import Button from "../ButtonNav/ButtonNav"
 import { StyledHeader } from "./StyledHeader"
+import { Link } from "react-router-dom"
 
-function Header() {
+export const Header = () => {
 
     return (
         <>
@@ -10,14 +11,12 @@ function Header() {
                 <nav>
                     <img src={LogoR} alt="customized leter R, reference to Rafael first leter name, the site owner." />
                     <div className="divButtons">
-                        <Button>Sobre mim</Button>
-                        <Button>Contatos</Button>
-                        <Button>Projetos</Button>
+                        <Link to={"/abOutMe"}><Button>Sobre mim</Button></Link>
+                        <Link to={"/prOJects"}><Button>Projetos</Button></Link>
+                        <Link to={"/contActs"}><Button>Contatos</Button></Link>
                     </div>
                 </nav>
             </StyledHeader>
         </>
     )
 }
-
-export default Header
